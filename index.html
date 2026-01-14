@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ar" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OKA | Official Site</title>
+    <link rel="stylesheet" href="style.css">
+ <link rel="icon" type="image/x-icon" href="./favicon.ico?v=2">
+</head>
+<body>
+
+    <header class="site-header" id="main-header">
+        <div class="header-container">
+            <div class="logo-area">
+                <a href="index.html">
+                    <h1 class="oka-logo">OKA</h1>
+                </a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#oka-style">OKA STYLE</a></li>
+                    <li><a href="#gallery">GALLERY</a></li>
+                    <li><a href="#link">LINK</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero-image">
+        <div class="hero-content">
+            <h1 class="hero-oka-logo">OKA</h1>
+            <p class="hero-subtitle">DESIGNED FOR SPEED</p>
+        </div>
+    </section>
+
+    <section id="about" class="content-section">
+        <div class="about-container">
+            <h2 class="section-title">ABOUT OKA</h2>
+            <p class="welcome-text">Hi Welcome In OKA Web I Hope To Have Fun In This Web</p>
+            <div class="red-line"></div>
+        </div>
+    </section>
+
+    <section id="oka-style" class="content-section grey-bg">
+        <div class="ai-container">
+            <h2 class="section-title">OKA AI ASSISTANT</h2>
+            <p class="ai-description">Ask me about any car with any type and I will tell you everything about it.</p>
+            
+            <div class="search-box">
+                <input type="text" id="car-query" placeholder="Type your car name here...">
+                <button onclick="askAI()" id="search-btn">ASK AI</button>
+            </div>
+
+            <div id="ai-response" class="response-area">
+                <p>Waiting for your question...</p>
+            </div>
+        </div>
+    </section>
+     >
+
+    <section id="gallery" class="content-section">
+        <div class="container">
+            <h2 class="section-title">CARS GALLERY</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="car1.jpg" alt="Car 1">
+                    <div class="item-overlay"><span>SUPER SPORT</span></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="car2.jpg" alt="Car 2">
+                    <div class="item-overlay"><span>OKA EDITION</span></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="car3.jpg" alt="Car 3">
+                    <div class="item-overlay"><span>NIGHT RIDER</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+      
+
+    <section id="link" class="content-section grey-bg">
+        <div class="container">
+            <h2>LINK</h2>
+            <p>قريبا.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 OKA WORLD. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        let lastScrollTop = 0;
+        const header = document.getElementById("main-header");
+        window.addEventListener("scroll", function() {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            if (scrollTop > lastScrollTop && scrollTop > 100) {
+                // عند النزول لأسفل يختفي
+                header.style.top = "-80px"; 
+            } else {
+                // عند الطلوع لأعلى يظهر
+                header.style.top = "0";
+            }
+        // دالة الذكاء الاصطناعي للرد على أسئلة السيارات
+        window.askAI = function() {
+            const query = document.getElementById("car-query").value.toLowerCase();
+            const responseArea = document.getElementById("ai-response");
+            
+            if (query.trim() === "") {
+                responseArea.innerHTML = "<p style='color: #ff0000;'>Please type a car name first!</p>";
+                return;
+            }
+
+            responseArea.innerHTML = "<p>Analyzing data for: " + query + "...</p>";
+
+            // محاكاة الرد (Logic المساعد)
+            setTimeout(() => {
+                if (query.includes("ferrari")) {
+                    responseArea.innerHTML = "<strong>OKA AI:</strong> Ferrari is an Italian luxury sports car maker. Known for speed and the 'Prancing Horse' logo. Top models: SF90, F8, and LaFerrari.";
+                } else if (query.includes("lamborghini")) {
+                    responseArea.innerHTML = "<strong>OKA AI:</strong> Lamborghini is famous for its aggressive designs and powerful V10/V12 engines. The Aventador and Huracán are legends of speed.";
+                } else if (query.includes("bmw")) {
+                    responseArea.innerHTML = "<strong>OKA AI:</strong> BMW is a German leader in luxury and performance. The M-Series (M3, M5) represents the ultimate driving machine.";
+                } else {
+                    responseArea.innerHTML = "<strong>OKA AI:</strong> I'm still learning about '" + query + "'. Try asking about Ferrari, BMW, or Lamborghini for detailed specs!";
+                }
+            }, 1000);
+        };
+        lastScrollTop = scrollTop;
+        });
+    </script>
+
+</body>
+</html>
