@@ -1,0 +1,361 @@
+/* تنسيق أساسي */
+html {
+    scroll-behavior: smooth;
+}
+
+body, h1, ul, li, a {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: 'Arial Black', Gadget, sans-serif;
+}
+
+body {
+    background-color: #111;
+}
+
+/* الهيدر المحدث */
+.site-header {
+    background: rgba(0, 0, 0, 0.85);
+    height: 65px;
+    width: 100%;
+    position: fixed;
+    top: 0; /* هذا هو المنطلق */
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: top 0.4s ease-in-out; /* حركة الإخفاء والإظهار الناعمة */
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 40px;
+}
+
+/* اللوجو النصي بظل أحمر */
+.oka-logo {
+    font-size: 2.4em;
+    color: #ffffff;
+    text-shadow: 3px 3px 0px #ff0000;
+    font-weight: 900;
+    font-style: italic;
+    letter-spacing: -2px;
+}
+
+/* الروابط */
+.main-nav ul {
+    display: flex;
+    gap: 30px;
+}
+
+.main-nav a {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.main-nav a:hover {
+    color: #ff0000;
+}
+
+/* تنسيق الأقسام للعرض */
+.hero-image {
+    height: 100vh;
+    background: #222; /* يمكنك وضع صورتك هنا */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-image h1 {
+    font-size: 5em;
+    color: white;
+}
+
+.content-section {
+    padding: 150px 20px;
+    text-align: center;
+    min-height: 800px;
+    color: white;
+}
+
+.grey-bg {
+    background-color: #1a1a1a;
+}
+/* تنسيق نص الترحيب في قسم ABOUT */
+.welcome-text {
+    font-size: 2.5rem; /* حجم خط كبير وواضح */
+    color: #ffffff;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+    letter-spacing: 1px;
+    text-transform: capitalize; /* يجعل أول حرف من كل كلمة كبيراً بشكل أنيق */
+}
+
+.red-line {
+    width: 100px;
+    height: 5px;
+    background-color: #ff0000; /* نفس درجة الأحمر الخاصة باللوجو */
+    margin: 30px auto;
+    border-radius: 2px;
+}
+
+/* تأكد أن هذا الجزء موجود لضمان خلفية القسم */
+.content-section {
+    padding: 150px 20px;
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+/* تنسيق حاوية قسم About */
+.about-container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* تنسيق العنوان الرئيسي */
+.section-title {
+    font-size: 3rem;
+    color: #ffffff;
+    margin-bottom: 10px; /* مسافة صغيرة جداً تحت العنوان */
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* تنسيق جملة الترحيب */
+.welcome-text {
+    font-size: 2rem;
+    color: #ffffff;
+    margin-top: 0; /* إلغاء أي مسافة علوية لتلتصق بالعنوان */
+    margin-bottom: 20px;
+    font-weight: 600;
+    max-width: 800px;
+    line-height: 1.4;
+}
+
+/* الخط الأحمر أسفل الكلام */
+.red-line {
+    width: 60px;
+    height: 4px;
+    background-color: #ff0000;
+    margin: 10px auto;
+}
+
+/* ضبط القسم ليكون المحتوى في المنتصف تماماً */
+.content-section {
+    padding: 100px 20px;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #111;
+}/* تنسيق العنوان */
+.section-title {
+    font-size: 3rem;
+    color: #ffffff;
+    margin-bottom: 0; /* مسحنا المسافة اللي تحت الكلمة خالص */
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1; /* بيخلي الارتفاع على قد الكلمة بالظبط */
+}
+
+/* تنسيق جملة الترحيب */
+.welcome-text {
+    font-size: 1.8rem;
+    color: #ffffff;
+    margin-top: 5px; /* مسافة بسيطة جداً 5 بيكسل بس عشان ميبقوش متداخلين */
+    font-weight: 600;
+    text-align: center;
+    line-height: 1.2;
+}
+
+/* الخط الأحمر الصغير */
+.red-line {
+    width: 40px;
+    height: 3px;
+    background-color: #ff0000;
+    margin: 15px auto 0; /* مسافة بسيطة فوق الخط */
+}
+
+/* الحاوية عشان تضمن إنهم فوق بعض بالظبط */
+.about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+/* تنسيق قسم الواجهة لإظهار الصورة واللوجو في النص */
+.hero-image {
+    height: 100vh;
+    /* استبدل 'car.jpg' باسم صورتك الجديدة */
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('car.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* تنسيق اللوجو الضخم في منتصف الشاشة */
+.hero-oka-logo {
+    font-size: 8rem;
+    color: #000;
+    text-shadow: 8px 8px 0px #ff0000; /* الظل الأحمر المميز */
+    font-weight: 900;
+    font-style: italic;
+    letter-spacing: -5px;
+    margin: 0;
+}
+
+.hero-subtitle {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-top: -10px;
+}
+/* تنسيق قسم الذكاء الاصطناعي */
+.ai-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.ai-description {
+    color: #ccc;
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+}
+
+/* تصميم شريط البحث */
+.search-box {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.search-box input {
+    width: 70%;
+    padding: 15px 20px;
+    border: 2px solid #333;
+    background: #000;
+    color: white;
+    border-radius: 5px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.search-box input:focus {
+    border-color: #ff0000; /* يتحول للأحمر عند الكتابة */
+}
+
+.search-box button {
+    padding: 15px 30px;
+    background: #ff0000;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.3s;
+}
+
+.search-box button:hover {
+    background: #cc0000;
+    transform: scale(1.05);
+}
+
+/* مكان الإجابة */
+.response-area {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 25px;
+    border-radius: 10px;
+    border-left: 5px solid #ff0000;
+    min-height: 100px;
+    text-align: left;
+    line-height: 1.6;
+    color: #eee;
+}
+/* تنسيق شبكة معرض الصور */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    height: 250px;
+    background: #222; /* لون احتياطي */
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.item-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(255, 0, 0, 0.4); /* تأثير أحمر شفاف عند الوقوف بالماوس */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.gallery-item:hover .item-overlay {
+    opacity: 1;
+}
+
+.item-overlay span {
+    color: white;
+    font-weight: bold;
+    border: 2px solid white;
+    padding: 10px 20px;
+}
+/* تنسيق يخلي الصور تظهر بالعرض فقط */
+.gallery-grid {
+    display: flex;             /* تفعيل وضع الصف العرضي */
+    flex-direction: row;       /* ترتيب العناصر في صف */
+    justify-content: center;   /* تذكير الصور في المنتصف */
+    gap: 20px;                 /* مسافة بين كل صورة والتانية */
+    flex-wrap: nowrap;         /* منع الصور من النزول لسطر جديد */
+    padding: 20px;
+    overflow-x: auto;          /* إضافة سكرول عرضي إذا كانت الصور أكبر من الشاشة */
+}
+
+.gallery-item {
+    flex: 0 0 300px;           /* تحديد عرض ثابت لكل صورة (300 بكسل) */
+    height: 200px;             /* تحديد ارتفاع ثابت */
+    border-radius: 10px;
+    overflow: hidden;
+}
